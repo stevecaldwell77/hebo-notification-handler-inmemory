@@ -1,8 +1,15 @@
 language: node_js
 node_js:
-  - '8'
-  - '10'
-script:
-  npm run test-coverage
-after_success:
-  npm run coverage
+- '8'
+- '10'
+script: npm run test-coverage
+after_success: npm run coverage
+deploy:
+  provider: npm
+  email: scaldwell@gmail.com
+  api_key:
+    secure: WTQOXvYN0Iga8DdR2t8Pwbzu6VKy4YIg6xcogcjjOAcxKHPvjKfjMWs++TonpqicNidW9cj53U21nIRftpI2DNyfJm9JZ9GtF9W35I+ST/jvHTHQeetI1DC7J5p0Aj7x1mjqH3rsWCZhQpmFgPq4wBAoYe0iUAdZqp132H1ZUTOChfOwuXJV7zPJK+8ysJrpCHJhTDzXwno+ShCc6MmLtY5EsgY9KvGSwXMoh/AS48tjjFCFTvbHBtTKNjFUocQMZieFrOrJukmtx/TSoa9YnqXmX3+K7ap8aZsU12l1fwT8Fq00bQNknO2QuL3X7xru0I49r/Ndf+yy5+bPMHCDOR5j0MgBLD/5R+6BeZMDi1CXvIpjUlezrC9lCAPi+gu3p620RrbWI3BbtSJHE2vAwqBoHzrIm+YB0hbCrh1O1utHaLb69JvkgpHxIfC28ESw5JXhhCiEHunJ/rrHNVYVJ5f8kgztj8mdmQ4I8jh1+h8doEUzAGoau/WpC7Ze9Jg73/YIj6yid+ZnZGCmMIhu0ZlhRXvYbmkTclUWrGH/QQqB4uMQxSYNmfHWJauCdG4B/cu3U8cshPZQ9hxj9eANEb7nyMGK1GCd+fsLOXnWhKQeQDKQzIAkx6zU1QYgWRyMJy/yg34XsCyqXjvCsjhC1cuIBDt/j5YsgR8GW2pyv9c=
+  on:
+    tags: true
+    repo: stevecaldwell77/hebo-notification-handler-inmemory
+    node: '8'
