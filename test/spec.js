@@ -1,6 +1,6 @@
 const test = require('ava');
 const shortid = require('shortid');
-const { validateNotificationHandler } = require('hebo/validators');
+const { validateNotificationHandler } = require('hebo-validation');
 const NotificationHandlerInmemory = require('..');
 
 test('passes validator', t => {
