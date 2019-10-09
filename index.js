@@ -29,12 +29,10 @@ class NotificationHandlerInmemory {
         this.notifications = [];
     }
 
-    // eslint-disable-next-line require-await
     async invalidEventsFound(notification) {
         this.storeNotification('invalidEventsFound', notification);
     }
 
-    // eslint-disable-next-line require-await
     async eventWritten(notification) {
         this.storeNotification('eventWritten', notification);
     }
